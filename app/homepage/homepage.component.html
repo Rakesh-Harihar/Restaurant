@@ -1,0 +1,27 @@
+<div class="container">
+  
+  <p>{{ today | date }}  {{ today | date:'shortTime' }}</p>
+
+  <div class="menu-body">
+     <!-- Section starts: Appetizers -->
+     <div class="menu-section">
+        <h2 class="menu-section-title"></h2>
+        <!-- Item starts -->
+        <div class="menu-item" *ngFor="let menu of items">
+           <div class="menu-item-name">
+            {{ menu.item_name }} 
+           </div>
+           <div class="menu-item-price">
+              <!-- <button class="btn btn-primary">add</button> -->
+           </div>
+           <div class="menu-item-description">
+              {{ menu.desc }}
+           </div>
+        </div>
+      </div>
+      <button id="attend" class="btn btn-success raised round" #at (click)="attendance()">TAKING IT</button>
+      <button id="notattend" class="btn btn-danger raised round" #nat (click)="notattendance()">LEAVING IT</button>
+  </div>
+  </div>
+
+  

@@ -1,0 +1,47 @@
+<!-- navbar -->
+<!-- navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-brand">MA[Va_]</div>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a routerLink="/menupage">Home</a>
+            </li>
+            <li>
+                <a class="its navbar-brand" routerLink="/editmenu">Edit Menu</a>
+            </li>
+            <li><a class="navbar-brand" routerLink="/count">Count of Users</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="navbar-brand glyphicon glyphicon-log-out" routerLink="/"> Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="menu-body">
+    <!-- Section starts: Appetizers -->
+    <div class="menu-section">
+        <h2 class="menu-section-title">MAIN COURSE</h2>
+        <!-- Item starts -->
+        <div class="menu-item" *ngFor="let dat of data" >
+            <div class="menu-item-name " #ch>
+                {{dat.item_name}}
+            </div>
+            <div class="menu-item-price">
+                <button class="btn btn-success" (click)="poster(ch.innerHTML)">add</button>&nbsp;
+                <button class="btn btn-danger glyphicon glyphicon-trash" (click)="remover(ch.innerHTML)"> remove</button>
+            </div>
+            <div class="menu-item-description">
+          
+            </div>
+        </div> 
+        <!--end of item-->
+    </div> 
+</div>
+  

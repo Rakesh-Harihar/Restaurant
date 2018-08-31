@@ -1,0 +1,23 @@
+<!-- navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">MA[Va_]</div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a class="navbar-brand" routerLink="/menupage">Home</a></li>
+      <li><a class="navbar-brand" routerLink="/editmenu">Edit Menu</a></li>
+      <li class="active"><a routerLink="/count">Count of Users</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="navbar-brand glyphicon glyphicon-log-out" routerLink="/"> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div>
+  <label>number of people attending</label>
+  <div> {{ count.AttendCount }} </div>
+  <label>number of people Not attending</label>
+  <div> {{ count.NotAttendCount }} </div>
+  <div id="nodata" class="text-danger"></div>
+</div>

@@ -1,0 +1,73 @@
+<!-- navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-brand">MA[Va_]</div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="navbar-brand glyphicon glyphicon-log-out" routerLink="/">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="imagebg"></div>
+<div class="row " style="margin-top: 50px">
+    <div class="col-md-6 col-md-offset-3 form-container">
+        <h2>Feedback</h2>
+        <p>
+            Please provide your feedback below:
+        </p>
+        <form role="form" method="post" id="reused_form">
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label>How do you rate your overall experience?</label>
+                    <p id="rad">
+                        <label class="radio-inline">
+                            <input #r1 type="radio" (change)="radios(r1.value)" name="experience" id="r1" value="bad"> Bad
+                        </label>
+
+                        <label class="radio-inline">
+                            <input #r2 type="radio" (change)="radios(r2.value)" name="experience" id="r2" value="average"> Average
+                        </label>
+
+                        <label class="radio-inline">
+                            <input #r3 type="radio" (change)="radios(r3.value)" name="experience" id="r3" value="good"> Good
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="comments">
+                        Comments:</label>
+                    <textarea #co class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000"
+                        rows="7"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label for="name">
+                        Your Name:</label>
+                    <input #na type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="email">
+                        Email:</label>
+                    <input #em type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button type="submit" class="btn btn-lg btn-warning btn-block" (click)="post(co.value,na.value,em.value)">Post </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
